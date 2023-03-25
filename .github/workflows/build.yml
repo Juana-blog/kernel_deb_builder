@@ -8,13 +8,13 @@ jobs:
     container: debian:buster
     steps:
       - name: Checkout
-        uses: actions/checkout
+        uses: actions/checkout@v3.5.0
 
       - name: Build
         run: bash build_action.sh
 
       - name: Artifact
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: artifact
           path: ${{ github.workspace }}/artifact/
